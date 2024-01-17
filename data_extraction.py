@@ -44,8 +44,20 @@ class DataExtractor:
             store_data.append(normalized_repos) # addes the datat frame of the dtore datat to the list of datat frames
         df_store_data = pd.concat(store_data, ignore_index=True).reset_index(drop=True)
         return df_store_data
-    
-    
+
+### tried soulution
+    # def retrive_store_data(self, number_of_stores):
+    #     headers = self.API_key()
+    #     store_data = [] # list of data frames
+    #     for store_number in range(number_of_stores): #tore_number will be the number of the store dta is being extracted for
+    #         response = requests.get(f'https://aqj7u5id95.execute-api.eu-west-1.amazonaws.com/prod/store_details/{store_number}', headers= headers)
+    #         repos = response.json() #data of store
+    #         normalized_repos = pd.json_normalize(repos) # dataframe of the store
+    #         store_data.append(pd.DataFrame(normalized_repos, index=[np.NaN])) # addes the datat frame of the dtore datat to the list of datat frames
+    #     df_store_data = pd.concat(store_data)
+    #     #show(df_store_data)
+    #     return df_store_data
+
 
     
 
