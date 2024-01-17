@@ -28,11 +28,6 @@ class DatabaseConnector:
         pg_admin_upload = data_frame.to_sql(table_name, sql_engine, if_exists='replace')
         return pg_admin_upload
 
-
-
-   
-
-
 #
 
 
