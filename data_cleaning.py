@@ -78,8 +78,35 @@ class DataCleaning:
         show(pdf_data)
         return pdf_data
     
+    def called_clean_store_data(self, data):
+        data.drop(columns='lat', inplace=True)#
+        data.drop(columns='index', inplace=True)
+        data.drop_duplicates(inplace=True)
+        columns_to_lower = [ 'address', 'locality', 'store_type','country_code', 'continent']
+        data[columns_to_lower] = data[columns_to_lower].apply(lambda x: x.str.lower())
+        data.drop_duplicates(inplace=True)
+        data['longitude'] = pd.to_numeric(data['longitude'], errors='coerce')
+        data['staff_numbers'] = pd.to_numeric(data['staff_numbers'], errors='coerce')
+        data['latitude'] = pd.to_numeric(data['latitude'], errors='coerce')
+        data['opening_date'] = pd.to_datetime(data['opening_date'], format='%Y-%m-%d', errors='coerce')
+        data.dropna(axis=0, how='any', inplace=True)
+        data.reset_index(drop = True, inplace = True)
+        data['continent'].replace('eeeurope', 'europe', inplace=True)
+        data['continent'].replace('eeamerica', 'america', inplace=True)
+        data.drop_duplicates(inplace=True)
+        data.dropna(axis=0, how='any', inplace=True)
+        data.reset_index(drop = True, inplace = True)
+        show(data)
+        return data
 
 
+
+    
+        
+    
+
+
+        
     
         
     
