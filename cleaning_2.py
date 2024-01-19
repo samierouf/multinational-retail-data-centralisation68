@@ -389,4 +389,82 @@ class DataCleaning:
     
 
 
+
+
+
+
+
+
+
+##############################################################################################################################################################################################################################################################################################################################################################################
+##############################################################################################################################################################################################################################################################################################################################################################################
+###########################################################################################################################################################################################################################################################################################################################################################################################################################################
+##############################################################################################################################################################################################################################################################################################################################################################################
+##############################################################################################################################################################################################################################################################################################################################################################################
+################################ WORKS ##############################################################################################################################################################################################################################################################################################################################################################################
+##############################################################################################################################################################################################################################################################################################################################################################################
+
+
+    # def clean_card_data(self, pdf_data):
+    #     columns_to_lower = ['card_provider']
+    #     pdf_data[columns_to_lower] = pdf_data[columns_to_lower].apply(lambda x: x.str.lower())
+    #     pdf_data.drop_duplicates(inplace=True)
+    #     pdf_data.reset_index(drop = True, inplace = True)
+    #     for card_index in range(len(pdf_data)):
+    #         if str(pdf_data['card_number'].values[card_index]).isnumeric() == False:
+    #             pdf_data['card_number'].values[card_index] = np.nan
+    #         else:
+    #             pass
+    #     #pdf_data['card_number'] = pd.to_numeric(pdf_data['card_number'], errors='coerce') # makes it in to e number 8.0045632+e17
+    #     pdf_data['date_payment_confirmed'] = pd.to_datetime(pdf_data['date_payment_confirmed'], format='%Y-%m-%d', errors='coerce')
+    #     pdf_data.dropna(axis=0, how='any', inplace=True)
+    #     pdf_data.reset_index(drop = True, inplace = True)
+    #     show(pdf_data)
+    #     return pdf_data
+    
+
+########################################################################################################################################################################################
+    # def clean_card_data(self, pdf_data):
+    #     columns_to_lower = ['card_provider']
+    #     pdf_data[columns_to_lower] = pdf_data[columns_to_lower].apply(lambda x: x.str.lower())
+    #     pdf_data.drop_duplicates(inplace=True)
+    #     pdf_data.reset_index(drop = True, inplace = True)
+    #     for card_index in range(len(pdf_data)):
+    #         if str(pdf_data['card_number'].values[card_index]).isnumeric() == False:
+    #             pdf_data['card_number'].values[card_index] = np.nan
+    #         else:
+    #             pass
+    #     #pdf_data['card_number'] = pd.to_numeric(pdf_data['card_number'], errors='coerce') # makes it in to e number 8.0045632+e17
+    #     pdf_data['date_payment_confirmed'] = pd.to_datetime(pdf_data['date_payment_confirmed'], format='%Y-%m-%d', errors='coerce')
+    #     pdf_data.dropna(axis=0, how='any', inplace=True)
+    #     pdf_data.reset_index(drop = True, inplace = True)
+    #     show(pdf_data)
+    #     return pdf_data
+    
+
+    # def clean_order_data(self, data):
+    #     data.drop(columns = 'first_name', inplace = True)
+    #     data.drop(columns = 'last_name', inplace = True)
+    #     data.drop(columns = '1', inplace = True)
+    #     data.drop(columns = 'level_0', inplace = True)
+    #     data.drop(columns = 'index', inplace =True)
+    #     # for card_index in range(len(data)):
+    #     #     if str(data['card_number'].values[card_index]).isnumeric() == False:
+    #     #         data['card_number'].values[card_index] = np.nan
+    #     #     else:
+    #     #         pass
+    #     data['card_number'] = pd.to_numeric(data['card_number'], errors='coerce')#15284
+    #     columns_to_lower = ['date_uuid', 'user_uuid', 'store_code', 'product_code']
+    #     data[columns_to_lower] = data[columns_to_lower].apply(lambda x: x.str.lower())
+    #     data.drop_duplicates(inplace=True)
+    #     data.drop_duplicates(subset=['card_number'], inplace=True)
+    #     data.dropna(axis=0, how='any', inplace=True)
+    #     data.reset_index(drop = True, inplace = True)
+    #     show(data)
+
+    #     return data
+    
+
+
+
         
