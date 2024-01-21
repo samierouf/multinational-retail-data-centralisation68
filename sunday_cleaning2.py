@@ -48,6 +48,38 @@ class DataCleaning:
         return data
 
 
+
+    def clean_card_data(self, data): # 2476
+        # makes data all lower case
+        columns_to_lower = ['card_number', 'expiry_date', 'card_provider', 'date_payment_confirmed']
+        data[columns_to_lower] = data[columns_to_lower].apply(lambda x: x.str.lower())
+        # removing nulls
+        data_columns = ['card_number', 'expiry_date', 'card_provider', 'date_payment_confirmed']
+        data[data_columns] = data[data_columns].replace(['', 'nan', 'null', 'none'], np.nan)
+
+        data.dropna(axis = 0, how='any', inplace=True)
+
+        # cleaning dates
+        data['expiry_date'] = pd.to_datetime(data['expiry_date'], format='%m/%y', errors='coerce')
+        data['date_payment_confirmed'] = pd.to_datetime(data['date_payment_confirmed'], errors='coerce')
+
+        today_datetime = pd.to_datetime(date.today())
+
+        data = data[~((~data['date_payment_confirmed'].isna()) & (data['date_payment_confirmed'] > today_datetime))]
+
+        # checking card_numbers
+        for card_index in range(len(data)):
+            if str(data['card_number'].values[card_index]).isnumeric() == False:
+                data['card_number'].values[card_index] = np.nan
+            else:
+                pass
+        
+        data = data[~(data['card_number'] == False)]
+
+        data.dropna(axis = 0, how='any', inplace = True)
+
+        return data
+
 ####################################################################################################################################################################################################################################################################################################################################
 
 
@@ -214,5 +246,8 @@ class DataCleaning:
         data.dropna(axis=0, how='any', inplace=True)
 
         return data
+
+
+
 
 
