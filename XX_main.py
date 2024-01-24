@@ -38,10 +38,10 @@ pgadmin_engine = connector.init_db_engine(pgadmin_creds)
 
 # #### card data ####
 
-card_data = extractor.retrieve_pdf_data('https://data-handling-public.s3.eu-west-1.amazonaws.com/card_details.pdf')
-card_data = cleaning.clean_card_data(card_data)
-connector.upload_to_db(card_data, 'dim_card_details', pgadmin_engine)
-print('end2')
+# card_data = extractor.retrieve_pdf_data('https://data-handling-public.s3.eu-west-1.amazonaws.com/card_details.pdf')
+# card_data = cleaning.clean_card_data(card_data)
+# connector.upload_to_db(card_data, 'dim_card_details', pgadmin_engine)
+# print('end2')
 
 
 # #### store data ####
@@ -50,7 +50,7 @@ print('end2')
 # store_data = extractor.retrive_store_data(number_of_stores)
 # store_data = cleaning.called_clean_store_data(store_data)
 # connector.upload_to_db(store_data, 'dim_store_details', pgadmin_engine)
-
+# print('end store data')
 
 # #### product data ####
 
@@ -58,6 +58,7 @@ print('end2')
 # product_data = extractor.extract_from_s3(address, 's3_products.csv')
 # product_data = cleaning.clean_products_data(product_data)
 # connector.upload_to_db(product_data, 'dim_products', pgadmin_engine)
+# print('end product datat')
 
 
 # #### orders data ####
@@ -68,13 +69,15 @@ print('end2')
 # data_7 = extractor.read_rds_table(engine, 'orders_table')
 # data_7 = cleaning.clean_orders_data(data_7)
 # connector.upload_to_db(data_7, 'orders_table', pgadmin_engine)
+# print('end orders data')
 
 
 
 # #### data data ####
 
 
-# address = 'https://data-handling-public.s3.eu-west-1.amazonaws.com/date_details.json'
-# data_8 = extractor.extract_from_s3_json(address)
-# data_8 = cleaning.clean_date_details(data_8)
-# connector.upload_to_db(data_8, 'dim_date_times', pgadmin_engine)
+address = 'https://data-handling-public.s3.eu-west-1.amazonaws.com/date_details.json'
+data_8 = extractor.extract_from_s3_json(address)
+data_8 = cleaning.clean_date_details(data_8)
+connector.upload_to_db(data_8, 'dim_date_times', pgadmin_engine)
+print('date data')
