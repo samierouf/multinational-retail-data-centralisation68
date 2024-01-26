@@ -73,13 +73,23 @@ SELECT DISTINCT card_number
 FROM dim_card_details
 WHERE card_number NOT IN (select card_number FROM orders_table
 ```
-From this it can be seen that many of the card numbers have '?' in them so we remove using 
+From this it can be seen that many of the card numbers have '?' in them so I remove using 
 ```python
 pdf_data['card_number'] = pdf_data['card_number'].astype(str).str.replace(r'\?','', regex = True)
 ```
 located in the `clean_card_data()` function which can be found in the `DataCleaning` class inside the `data_cleaning.py` file. we the rerun the previous sql queery to see if there is any that has been missed.
 
-this cleaning is repeated for evrey table to make the data more unifore and be able to mathc the orders_table it is during the cleaning where we drop columns and make sure that the datat are in the ocreect format.One thing to look out for is any column that is related to dates as they can cause issues if they are not in the right format. the SQL code that is very helpful in this situation is 
+this cleaning is repeated for evrey table to make the data more uniform and be able to matches the orders_table it is during the cleaning where we drop columns and make sure that the datat are in the ocreect format.One thing to look out for is any column that is related to dates as they can cause issues if they are not in the right format. I found that it SQL was much better at finding these irregular dates than python the SQL code i used to find them was:
+```sql
+SELECT *
+FROM dim_card_details
+WHERE NOT (dat_payment_confirmed is NULL OR date_payment_confirmed ~ '^\d{4}-\d{2}-\d{2}$';
+```
+here we can see that a number of the dates are not in the correct form and if python ```python pd.to_datetime()``` function was used they would come up as errors. so before we use the ```python pd.to_datetime()``` function to make the column into the right format they must be corrected which i have done by making a function called `correct_payment_dates()` in the `data_cleaning.py` file. in this function i created a dictionary to with the incorrectly formatted dates to their corrected form then mapped them over the date_payment_confirmed column of the card dataset to correct them. then used ```pd.to_datetime()``` to make the column to the right type.
+
+
+
+ 
 
 
 
