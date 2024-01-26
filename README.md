@@ -27,10 +27,10 @@ git clone https://github.com/samierouf/multinational-retail-data-centralisation6
 To run this code or recreate something similar, install the prerequisites. Once everything is downloaded/installed, create an environment, a local repository, and clone the repo. Run the main.py file to automatically extract, clean, and upload data from various sources to the sales_data database on your localhost.
 
 ## Project format
--'database_utils.py'
--'data_extraction.py'
--'data_cleaning.py'
--'SQL_code' file 
+- 'database_utils.py'
+- 'data_extraction.py'
+- 'data_cleaning.py'
+- 'SQL_code' file 
 
 ## Project information
 ### data_utils.py
