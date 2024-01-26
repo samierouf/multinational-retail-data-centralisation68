@@ -73,7 +73,6 @@ SELECT DISTINCT card_number
 FROM dim_card_details
 WHERE card_number NOT IN (select card_number FROM orders_table
 ```
-![Screenshot 2024-01-22 181754](https://github.com/samierouf/multinational-retail-data-centralisation68/assets/142994082/5d9fc713-8709-48cb-bccc-72afb2aec7c9)
 From this it can be seen that many of the card numbers have '?' in them so I remove using 
 ```python
 pdf_data['card_number'] = pdf_data['card_number'].astype(str).str.replace(r'\?','', regex = True)
@@ -86,7 +85,9 @@ SELECT *
 FROM dim_card_details
 WHERE NOT (dat_payment_confirmed is NULL OR date_payment_confirmed ~ '^\d{4}-\d{2}-\d{2}$';
 ```
-here we can see that a number of the dates are not in the correct form and if python ```python pd.to_datetime()``` function was used they would come up as errors. so before we use the ```python pd.to_datetime()``` function to make the column into the right format they must be corrected which i have done by making a function called `correct_payment_dates()` in the `data_cleaning.py` file. in this function i created a dictionary to with the incorrectly formatted dates to their corrected form then mapped them over the date_payment_confirmed column of the card dataset to correct them. then used ```pd.to_datetime()``` to make the column to the right type and then the cleaned and processsed data is uploaded to sales_data database. This process is repeated for all tables.
+![Screenshot 2024-01-22 181754](https://github.com/samierouf/multinational-retail-data-centralisation68/assets/142994082/5d9fc713-8709-48cb-bccc-72afb2aec7c9)
+
+Here we can see that a number of the dates are not in the correct form and if python ```python pd.to_datetime()``` function was used they would come up as errors. so before we use the ```python pd.to_datetime()``` function to make the column into the right format they must be corrected which i have done by making a function called `correct_payment_dates()` in the `data_cleaning.py` file. in this function i created a dictionary to with the incorrectly formatted dates to their corrected form then mapped them over the date_payment_confirmed column of the card dataset to correct them. then used ```pd.to_datetime()``` to make the column to the right type and then the cleaned and processsed data is uploaded to sales_data database. This process is repeated for all tables.
 
 ### Milestone 3
 In this milestone we will be making a star-based schema for the database as well as make sure the columns are the correct datat types. building a star-based schema where the orders_table as the central table will allow for easier understandability as well as making it easier to preforme querries. this milestone can 9 parts:
