@@ -110,6 +110,21 @@ In this milestone we will be making a star-based schema for the database as well
   creating foreign keys in the order_table
 
 ### Milestone 4
+in this milestone we will be querying the data.
+
+- #### How many stores does the business have and in which countries are they located in?
+  
+- #### Which location currently have the most stores? 'ms4_task1.sql`
+- #### Which months produced thelargest amount of sales? 'ms4_task2.sql`
+- #### Which country produced the larges amount of sales? 'ms4_task3.sql`
+- #### How many sales are coming from online? 'ms4_task4.sql`
+- #### What percentage of slaes come through each store type? 'ms4_task5.sql`
+- #### Whoch month in each year produced the highestcost of sales? 'ms4_task6.sql`
+- #### What is our staff head count? 'ms4_task7.sql`
+- #### Which german store type is selling the most? 'ms4_task8.sql`
+- #### How quickly is the company making sales? 'ms4_task9.sql`
+
+
 
 
 
