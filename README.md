@@ -15,7 +15,6 @@ The goal of this project is to extract, clean, and centralize data from multiple
 ## Installation
 ```bash
 pip install -r requirements.txt
-
 ```
 
 ## Clonening the repo
