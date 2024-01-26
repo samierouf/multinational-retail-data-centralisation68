@@ -73,6 +73,8 @@ SELECT DISTINCT card_number
 FROM dim_card_details
 WHERE card_number NOT IN (select card_number FROM orders_table
 ```
+![Screenshot 2024-01-22 170211](https://github.com/samierouf/multinational-retail-data-centralisation68/assets/142994082/a9dd70d3-e408-4057-9ccb-aacdb73fd01f)
+
 From this it can be seen that many of the card numbers have '?' in them so I remove using 
 ```python
 pdf_data['card_number'] = pdf_data['card_number'].astype(str).str.replace(r'\?','', regex = True)
