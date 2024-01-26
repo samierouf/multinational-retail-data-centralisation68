@@ -56,8 +56,31 @@ This milestone is all about setting up the python environment, the sales_data  d
 In this milestone we are goint to extract the data from their various sources, clean the data as well as upload them to the loca sales_data daabase that was created in milestone 1. the datat will be extracted from multiple diffrent sorces. the order table datat is stored in a daabase on AWS RDS and will be uploaded to the localhost wiht the names `orders_table`.  The user data is also stored in the same location as the order table datat so we can reuse the same method to extract it and will be uploaded to the `sales_data` database under the name `dim_users`. hte card datat is located in a pdf doccument inside an AWS S3 bucket after extracting we will upload it with the name `dim_card_details`. The store data is stored on an APi after extraction it will be uploaded to the under the name `dim_store_details`. the product details data is located in CSV on an AWS S3 bucket and be called `dim_product` when it is uploaded. The dates data is stored as a JSON file on S£ after extracting it we will call it `dim_date_times` when we upload it to the loacal database `sales_data`.
 
 #### Data cleaning
-After extracting the data from the various sources they were then uploaded to the sales_data database. The orders_table is the most important table as it acts as the single source of truth it will also be the table that all other tables serve as such it is imports to ensure the datat in the other table match the data in the `orders_table`. As such we can see what the length of the other tables can be from the orders table as well as the information that they must conaint as we will later make forign keys for the order_table later in milestone 3. this can be done using 
+After extracting the data from the various sources they were then uploaded to the sales_data database. The orders_table is the most important table as it acts as the single source of truth it will also be the table that all other tables serve as such it is imports to ensure the datat in the other table match the data in the `orders_table`. As such we can see what the length of the other tables can be from the orders table as well as the information that they must conaint as we will later make forign keys for the order_table later in milestone 3. this can be done using :
 ```sql
-SELECT DISTINCT COUNT(date_uuid)
+SELECT COUNT(DISTINCT(card_number))
 FROM orders_table
 ```
+replacing card_number with the corresponding forieng key of the table that you want to examine.
+`dim_card_details` - card_number
+`dim_date_times` - date_uuid
+`dim_products` - product_code
+`dim_store_detail` - store_code
+`dim_users` - user_uuid
+So from this we can see that there is 15284 pieces of unique data in the card_number column of the orders_table so the dim_card_details table must also be 120123 in size but the dim_card_details table size is 15309 which tells us that there is 25 pieces of invalid data that we have to remove from the dim_card_details column. The invalid data that need to be cleaned can be viewed using:
+```sql
+SELECT DISTINCT card_number
+FROM dim_card_details
+WHERE card_number NOT IN (select card_number FROM orders_table
+```
+From this it can be seen that many of the card numbers have '?' in them so we remove using 
+```python
+pdf_data['card_number'] = pdf_data['card_number'].astype(str).str.replace(r'\?','', regex = True)
+```
+located in the `clean_card_data()` function which can be found in the `DataCleaning` class inside the `data_cleaning.py` file. we the rerun the previous sql queery to see if there is any that has been missed.
+
+this cleaning is repeated for evrey table to make the data more unifore and be able to mathc the orders_table it is during the cleaning where we drop columns and make sure that the datat are in the ocreect format.One thing to look out for is any column that is related to dates as they can cause issues if they are not in the right format. the SQL code that is very helpful in this situation is 
+
+
+
+
