@@ -61,7 +61,6 @@ class DataExtractor:
 
         pdf_data_frame = tabula.read_pdf(link, pages='all')
         pdf_data_frame = pd.concat(pdf_data_frame)
-        show(pdf_data_frame)
 
         return pdf_data_frame
     
