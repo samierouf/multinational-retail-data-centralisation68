@@ -24,7 +24,7 @@ git clone https://github.com/samierouf/multinational-retail-data-centralisation6
 ```
 
 ## Usage
-To run this code or to recreate something similare you will need the all of the prerequisites. Once you have evrything dowlonaded/installed you can createn an environment and local reposity and clone the repo. Once the repo has been installed you can run the main.py file which will automatically extract clean and upload the data from the variuos sorces and upload to the sales_data databse you created on your localhost.
+To run this code or recreate something similar, install the prerequisites. Once everything is downloaded/installed, create an environment, a local repository, and clone the repo. Run the main.py file to automatically extract, clean, and upload data from various sources to the sales_data database on your localhost.
 
 ## Project format
 -'database_utils.py'
@@ -34,19 +34,15 @@ To run this code or to recreate something similare you will need the all of the 
 
 ## Project information
 ### data_utils.py
-contains the code that is used to connet to the databases.
+Contains code used to connect to databases.
 ### data_extraction.py
-contains the code that is used to extract the data from its different locations
-
+Contains code for extracting data from different locations.
 ### data_cleaning.py 
-contains the code that is used to clean and process the data after extraction.
-
+Contains code for cleaning and processing data after extraction.
 ### SQL_code
-contains the code for devloping the star based schemea and the code for queerying the datat to find specific information.
-
+Contains code for developing the star-based schema and querying data to find specific information.
 ## Project steps
-this projects can be broken down into 4 key milestone.
-
+This project can be broken down into 4 key milestones.
 ### Milestone 1
 This milestone is all about setting up the python environment, the sales_data  database , creating the YAMAL  files that are going to hold the credentials for uploading and dowloading databases and having an accese to AWS CLI vi access keys for an IamUser account.
 
