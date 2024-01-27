@@ -141,7 +141,8 @@ in this milestone we will be querying the data.
 
 
 
-
+## Learning
+this project has taught me a lot. It has taught me the importace of inspecting datat before cleaning it as well as relying on the source of truth if one is available and that treating all datat that oes not automatically for the desried format as null can have adverse consequences as useful datat may be removed and that spending the time to correct that datat may be worth it. As well as not focusing on all the data but the important ones can produce a better result. It has also taught me the about star-based schemas and how they can be of benfit to both orginasation and users as a star based scheme can allow for better scallability, making the database simpilar to understand as well as making it easiee to querry the data. creating CTE's joining them together converting the dtattypes of columns and making me more comfetable using SQL. The python segment of this project has introduced me to boolean indexing and its usefullness as well as how to deal with probles relating to how the data is being read an example being that
 
 
 
