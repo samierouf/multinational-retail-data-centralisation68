@@ -120,14 +120,16 @@ SELECT MAX(LENGTH(card_number::TEXT)) FROM dim_card_details;
 in this milestone we will be querying the data.
 
 - #### How many stores does the business have and in which countries are they located in?
-  
+  - ![Screenshot 2024-01-27 135956](https://github.com/samierouf/multinational-retail-data-centralisation68/assets/142994082/d5a64891-662c-478f-85cc-a17ba0c4b011)
+
 - #### Which location currently have the most stores? 'ms4_task1.sql`
-- ![Screenshot 2024-01-27 135956](https://github.com/samierouf/multinational-retail-data-centralisation68/assets/142994082/d5a64891-662c-478f-85cc-a17ba0c4b011)
+  - ![Screenshot 2024-01-27 140552](https://github.com/samierouf/multinational-retail-data-centralisation68/assets/142994082/723332b7-6da0-4905-a0cc-fecaebe452ed)
 - #### Which months produced the largest amount of sales? 'ms4_task2.sql`
-- ![Screenshot 2024-01-27 140552](https://github.com/samierouf/multinational-retail-data-centralisation68/assets/142994082/723332b7-6da0-4905-a0cc-fecaebe452ed)
+  -![Screenshot 2024-01-27 141052](https://github.com/samierouf/multinational-retail-data-centralisation68/assets/142994082/7d24bee6-aa81-485a-bdab-db24a93a2ccb)
 - #### Which country produced the largest amount of sales? 'ms4_task3.sql`
-- 
+  -![Screenshot 2024-01-27 141220](https://github.com/samierouf/multinational-retail-data-centralisation68/assets/142994082/2ca0d532-ce3f-4def-a624-20cdc51ab7fd)
 - #### How many sales are coming from online? 'ms4_task4.sql`
+  -![Screenshot 2024-01-27 141334](https://github.com/samierouf/multinational-retail-data-centralisation68/assets/142994082/3a2056db-859a-4201-9606-a6b7ac545ea7)
 - #### What percentage of sales come through each store type? 'ms4_task5.sql`
 - #### Which month in each year produced the highest cost of sales? 'ms4_task6.sql`
 - #### What is our staff head count? 'ms4_task7.sql`
