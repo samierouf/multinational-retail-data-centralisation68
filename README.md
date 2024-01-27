@@ -125,12 +125,13 @@ in this milestone we will be querying the data.
 - #### Which location currently have the most stores? 'ms4_task2.sql`
   - ![Screenshot 2024-01-27 140552](https://github.com/samierouf/multinational-retail-data-centralisation68/assets/142994082/723332b7-6da0-4905-a0cc-fecaebe452ed)
 - #### Which months produced the largest amount of sales? 'ms4_task3.sql`
-  -![Screenshot 2024-01-27 141052](https://github.com/samierouf/multinational-retail-data-centralisation68/assets/142994082/7d24bee6-aa81-485a-bdab-db24a93a2ccb)
+  - ![Screenshot 2024-01-27 141052](https://github.com/samierouf/multinational-retail-data-centralisation68/assets/142994082/7d24bee6-aa81-485a-bdab-db24a93a2ccb)
 - #### How many sales are coming from online vs offline? 'ms4_task4.sql`
-  -![Screenshot 2024-01-27 141220](https://github.com/samierouf/multinational-retail-data-centralisation68/assets/142994082/2ca0d532-ce3f-4def-a624-20cdc51ab7fd)
+  - ![Screenshot 2024-01-27 141220](https://github.com/samierouf/multinational-retail-data-centralisation68/assets/142994082/2ca0d532-ce3f-4def-a624-20cdc51ab7fd)
 - #### What percentage of sales come through each store type? 'ms4_task5.sql`
-  -![Screenshot 2024-01-27 141334](https://github.com/samierouf/multinational-retail-data-centralisation68/assets/142994082/3a2056db-859a-4201-9606-a6b7ac545ea7)
+  - ![Screenshot 2024-01-27 141334](https://github.com/samierouf/multinational-retail-data-centralisation68/assets/142994082/3a2056db-859a-4201-9606-a6b7ac545ea7)
 - #### Which month in each year produced the highest cost of sales? 'ms4_task6.sql`
+- 
 - #### What is our staff head count? 'ms4_task7.sql`
 - #### Which German store type is selling the most? 'ms4_task8.sql`
 - #### How quickly is the company making sales? 'ms4_task9.sql`
