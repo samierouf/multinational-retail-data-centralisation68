@@ -109,6 +109,11 @@ In this milestone we will be making a star-based schema for the database as well
   creating primary keys for the other tables
 - #### Part 9 `ms3_task9.sql`
   creating foreign keys in the order_table
+when changing the column type to VARCHAR(?). To work out the max length the column needed to be i used the following code:
+```sql
+SELECT MAX(LENGTH(card_number::TEXT)) FROM dim_card_details;
+```
+
 
 ### Milestone 4
 in this milestone we will be querying the data.
