@@ -19,10 +19,12 @@ connector = DatabaseConnector()
 extractor = DataExtractor()
 cleaning = DataCleaning()
 
-pgadmin_creds = connector.read_db_creds('pgadmin_creds.yaml')
-pgadmin_engine = connector.init_db_engine(pgadmin_creds)
+
 
 if __name__ == "__main__":
+    pgadmin_creds = connector.read_db_creds('pgadmin_creds.yaml')
+    pgadmin_engine = connector.init_db_engine(pgadmin_creds)
+    
     #### Users Data ####
     db_creds = connector.read_db_creds('db_creds.yaml')
     engine = connector.init_db_engine(db_creds)
