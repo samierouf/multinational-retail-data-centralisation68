@@ -113,6 +113,7 @@ when changing the column type to VARCHAR(?). To work out the max length the colu
 ```sql
 SELECT MAX(LENGTH(card_number::TEXT)) FROM dim_card_details;
 ```
+![Screenshot 2024-01-27 134900](https://github.com/samierouf/multinational-retail-data-centralisation68/assets/142994082/9b77155d-f2cf-4ace-9509-4b7de347528f)
 
 
 ### Milestone 4
