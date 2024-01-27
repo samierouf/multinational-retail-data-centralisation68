@@ -142,7 +142,43 @@ in this milestone we will be querying the data.
 
 
 ## Learning
-this project has taught me a lot. It has taught me the importace of inspecting datat before cleaning it as well as relying on the source of truth if one is available and that treating all datat that oes not automatically for the desried format as null can have adverse consequences as useful datat may be removed and that spending the time to correct that datat may be worth it. As well as not focusing on all the data but the important ones can produce a better result. It has also taught me the about star-based schemas and how they can be of benfit to both orginasation and users as a star based scheme can allow for better scallability, making the database simpilar to understand as well as making it easiee to querry the data. creating CTE's joining them together converting the dtattypes of columns and making me more comfetable using SQL. The python segment of this project has introduced me to boolean indexing and its usefullness as well as how to deal with probles relating to how the data is being read an example being that when i was cleaning the staff_numbers column i wanted to remove any non diget number so i tried ```python data['staff_numbers'].str.replace(r'\D', '')``` evnthough the code would run ans no error would be outputted but what i wanted to be remove was still there, the solution was ```data['staff_numbers'].astype(str).str.replace(r'\D', '')```.
+### Data Inspection and Cleaning
+- Importance of inspecting data before cleaning.
+- Relying on the source of truth for accurate data.
+
+### Handling Null Values
+- Treating all data that doesn't conform to the desired format as null.
+- Balancing the removal of null data with the risk of losing useful information.
+
+### Focus on Important Data
+- Recognizing the significance of focusing on important data.
+- Producing better results by prioritizing relevant information.
+
+### Understanding Star-Based Schemas
+- Benefits of star-based schemas for scalability and simplicity.
+- Facilitating easier data querying with star-based schema structures.
+
+### SQL Skills Development
+- Creating Common Table Expressions (CTEs).
+- Joining tables, converting data types, and comfortable usage of SQL.
+
+### Python Techniques
+- Introduction to boolean indexing.
+- Problem-solving related to data reading and cleaning.
+- 
+### Handling Null Values
+### Handling Null Values
+- Learned from an instance where treating all data not in the desired format as null had consequences.
+- Encountered a scenario where spending time to correct data format proved to be worthwhile.
+  - **Example:** During the cleaning process, I initially removed all dates that were not in the correct format. However, this approach led to issues in creating primary and foreign keys. It was only when I started focusing on the important data that I realized correcting the formatting issues, instead of treating them as null, was worth the time invested.
+
+### Python Techniques
+- Encountered a challenge with `str.replace(r'\D', '')` and discovered the correct solution: `astype(str).str.replace(r'\D', '')`.
+
+## Reflecting on Real-World Application
+- Recognizing how these skills can be applied to future projects or in a professional database management setting.
+- Understanding the practical implications of data inspection, cleaning, and SQL usage in real-world scenarios.
+
 
 
 
