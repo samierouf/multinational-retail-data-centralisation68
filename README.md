@@ -11,6 +11,7 @@ The goal of this project is to extract, clean, and centralize data from multiple
 - SQL, PostgreSQL
 - pgAdmin 4 or other suitable alternatives (create an empty database called 'sales_data')
 - YAML files containing information about the databases: 'pgadmin_creds.yaml' and 'db_cred.yaml'
+- SQLTools
 
 ## Installation
 ```bash
@@ -175,13 +176,14 @@ in this milestone we will be querying the data.
 - Encountered a challenge with `str.replace(r'\D', '')` and discovered the correct solution: `astype(str).str.replace(r'\D', '')`.
 
 ## Reflecting on Real-World Application
-- this project has also helped me realise how or why orginisation would use sql and database mangemnt to help make buisness dicisions.
-- Understanding the practical implications of data inspection, cleaning, and SQL usage in real-world scenarios.
+- This project has helped me understand the practical applications of SQL and database management.
+- It provided insights into why organisations utilize SQL for data inspection, cleaning, and overall database management in real-world scenarios.
 
-## Troubleshooting.
-- some of the required libraries may not work make sure that java 8 is installed and in the right location
-- issues with python. user a previous versioon instead of the most current version
-- correct credentials to access the datatbases. make sure the credentials for accesing the database are correct.
+## Troubleshooting
+- **Java 8 Installation**: Ensure that Java 8 is installed and located correctly; some required libraries may not function without it.
+- **Python Version Compatibility**: If encountering issues with Python, consider using a previous version instead of the latest one.
+- **Database Access Credentials**: Verify the correctness of the credentials for accessing databases to avoid any connection problems.
+
 
 
 
