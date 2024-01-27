@@ -1,4 +1,4 @@
-WITH full_timestamp_table AS( ------Final final
+WITH full_timestamp_table AS( 
 SELECT
 	dim_date_times.date_uuid,
 	dim_date_times.year,
