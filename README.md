@@ -151,7 +151,7 @@ in this milestone we will be querying the data.
 - Balancing the removal of null data with the risk of losing useful information.
 
 ### Focus on Important Data
-- Recognizing the significance of focusing on important data.
+- Recognising the significance of focusing on important data.
 - Producing better results by prioritizing relevant information.
 
 ### Understanding Star-Based Schemas
@@ -167,7 +167,6 @@ in this milestone we will be querying the data.
 - Problem-solving related to data reading and cleaning.
 - 
 ### Handling Null Values
-### Handling Null Values
 - Learned from an instance where treating all data not in the desired format as null had consequences.
 - Encountered a scenario where spending time to correct data format proved to be worthwhile.
   - **Example:** During the cleaning process, I initially removed all dates that were not in the correct format. However, this approach led to issues in creating primary and foreign keys. It was only when I started focusing on the important data that I realized correcting the formatting issues, instead of treating them as null, was worth the time invested.
@@ -176,8 +175,13 @@ in this milestone we will be querying the data.
 - Encountered a challenge with `str.replace(r'\D', '')` and discovered the correct solution: `astype(str).str.replace(r'\D', '')`.
 
 ## Reflecting on Real-World Application
-- Recognizing how these skills can be applied to future projects or in a professional database management setting.
+- this project has also helped me realise how or why orginisation would use sql and database mangemnt to help make buisness dicisions.
 - Understanding the practical implications of data inspection, cleaning, and SQL usage in real-world scenarios.
+
+## Troubleshooting.
+- some of the required libraries may not work make sure that java 8 is installed and in the right location
+- issues with python. user a previous versioon instead of the most current version
+- correct credentials to access the datatbases. make sure the credentials for accesing the database are correct.
 
 
 
