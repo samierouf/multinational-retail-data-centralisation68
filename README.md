@@ -31,7 +31,9 @@ To run this code or recreate something similar, install the prerequisites. Once 
 - 'database_utils.py'
 - 'data_extraction.py'
 - 'data_cleaning.py'
-- 'SQL_code' file 
+- 'SQL_code' file
+  - milestone_3
+  - milestone_4
 
 ## Project information
 ### data_utils.py
