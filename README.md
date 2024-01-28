@@ -150,12 +150,12 @@ in this milestone we will be querying the data.
 - Relying on the source of truth for accurate data.
 
 ### Handling Null Values
-- Treating all data that doesn't conform to the desired format as null.
+- Treating all data that doesn't conform to the desired format as null not always a smart way to go.
 - Balancing the removal of null data with the risk of losing useful information.
 
 ### Focus on Important Data
 - Recognising the significance of focusing on important data.
-- Producing better results by prioritizing relevant information.
+- Producing better results by prioritising relevant information.
 
 ### Understanding Star-Based Schemas
 - Benefits of star-based schemas for scalability and simplicity.
@@ -168,7 +168,8 @@ in this milestone we will be querying the data.
 ### Python Techniques
 - Introduction to boolean indexing.
 - Problem-solving related to data reading and cleaning.
-- 
+- Introduction to secure coding practices.
+  
 ### Handling Null Values
 - Learned from an instance where treating all data not in the desired format as null had consequences.
 - Encountered a scenario where spending time to correct data format proved to be worthwhile.
